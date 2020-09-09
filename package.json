@@ -1,0 +1,30 @@
+{
+  "name": "taskcluster-net",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "14.x.x",
+    "yarn": "^1.22.4"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src"
+  },
+  "dependencies": {
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-hot-loader": "^4"
+  },
+  "devDependencies": {
+    "@mozilla-frontend-infra/react-lint": "^2.0.1",
+    "@neutrinojs/react": "^9.4.0",
+    "eslint": "^7",
+    "neutrino": "^9.4.0",
+    "webpack": "^4",
+    "webpack-cli": "^3",
+    "webpack-dev-server": "^3"
+  }
+}
