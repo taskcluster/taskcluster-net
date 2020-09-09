@@ -15,7 +15,7 @@ module.exports = {
     }),
     react({
       html: {
-        title: 'Taskcluster'
+        title: 'Taskcluster',
       }
     }),
   ],

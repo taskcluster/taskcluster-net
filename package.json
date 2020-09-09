@@ -13,10 +13,13 @@
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
-    "react-hot-loader": "^4"
+    "react-fout-stager": "^3.0.0",
+    "react-hot-loader": "^4",
+    "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
     "@mozilla-frontend-infra/react-lint": "^2.0.1",
