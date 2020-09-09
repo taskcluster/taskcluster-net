@@ -1,15 +1,26 @@
 import { hot } from 'react-hot-loader';
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Home from './Home';
 import FontStager from './components/FontStager';
 
 const CONTENT_MAX_WIDTH = 1592;
 const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    minHeight: '100vh',
+    zIndex: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex',
+    width: '100%',
+  },
   appBar: {
     position: 'fixed',
     backgroundColor: 'rgb(45, 83, 115)',
@@ -26,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background,
     overflowY: 'auto',
+    padding: '1em',
     minHeight: 'calc(100vh - 56px)',
     marginTop: 56,
     [theme.breakpoints.up('sm')]: {
@@ -34,12 +46,11 @@ const useStyles = makeStyles(theme => ({
     },
   },
 }));
-const message = 'Welcome to Taskcluster';
 const App = () => {
   const classes = useStyles();
 
   return (
-    <Fragment>
+    <div className={classes.root}>
       <FontStager />
       <CssBaseline />
       <AppBar className={classes.appBar}>
@@ -50,10 +61,9 @@ const App = () => {
         </Toolbar>
       </AppBar>
       <main className={classes.content}>
-        <h1>{message}</h1>
-        Hello..
+        <Home />
       </main>
-    </Fragment>
+    </div>
   );
 };
 
