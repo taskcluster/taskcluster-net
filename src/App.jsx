@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
+    background: '#12202c',
   },
   appBar: {
     position: 'fixed',
