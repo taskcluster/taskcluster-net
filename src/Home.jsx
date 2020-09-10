@@ -17,79 +17,6 @@ import ChatIcon from 'mdi-react/ChatIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 import AccountVoiceIcon from 'mdi-react/AccountVoiceIcon';
 
-const cards = [
-  {
-    title: 'Documentation',
-    content: (
-      <Typography variant="body2">
-        The Taskcluster documentation is at{' '}
-        <Link href="https://docs.taskcluster.net">docs.taskcluster.net</Link>.
-        Start here to learn how Taskcluster is designed and how to use it.
-      </Typography>
-    ),
-    icon: <BookOpenVariantIcon />,
-  },
-  {
-    title: 'At Mozilla',
-    content: (
-      <Typography variant="body2">
-        Taskcluster is used to build{' '}
-        <Link href="https://firefox-ci-tc.services.mozilla.com/tasks/index/gecko.v2.mozilla-release.latest.firefox">
-          Firefox
-        </Link>
-        , as well as many of Mozilla&#39;s{' '}
-        <Link href="https://community-tc.services.mozilla.com/tasks/index/project">
-          exciting new projects
-        </Link>
-        .
-      </Typography>
-    ),
-    icon: <RocketLaunchIcon />,
-  },
-  {
-    title: 'Source Code',
-    content: (
-      <Typography variant="body2">
-        Find the latest Taskcluster source code{' '}
-        <Link href="https://github.com/taskcluster">on GitHub</Link>, along with
-        our{' '}
-        <Link href="https://github.com/taskcluster/taskcluster-rfcs">
-          RFC process
-        </Link>{' '}
-        for making architectural decisions.
-      </Typography>
-    ),
-    icon: <SourceRepositoryMultipleIcon />,
-  },
-  {
-    title: 'Contact Us',
-    content: (
-      <Typography variant="body2">
-        Get in touch with the Taskcluster team, whether to ask questions, meet
-        fellow users, or get started contributing to the project.
-        <List dense>
-          <ListItem>
-            <ListItemIcon>
-              <ChatIcon />
-            </ListItemIcon>
-            <Link href="https://chat.mozilla.org/#/room/#taskcluster:mozilla.org">
-              #taskcluster:mozilla.org
-            </Link>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <EmailIcon />
-            </ListItemIcon>
-            <Link href="https://lists.mozilla.org/listinfo/tools-taskcluster">
-              tools-taskcluster@lists.mozilla.org
-            </Link>
-          </ListItem>
-        </List>
-      </Typography>
-    ),
-    icon: <AccountVoiceIcon />,
-  },
-];
 const useStyles = makeStyles(theme => ({
   card: {
     position: 'relative',
@@ -105,39 +32,151 @@ const useStyles = makeStyles(theme => ({
   title: {
     marginLeft: theme.spacing(1),
   },
+  logo: {
+    position: 'absolute',
+    right: '2em',
+    width: '5em',
+  },
 }));
 const Home = () => {
   const classes = useStyles();
 
   return (
     <Fragment>
-      <Typography variant="h2">Taskcluster</Typography>
-
-      <Typography variant="body1">
-        Taskcluster is the task execution framework that supports Mozilla&#39;s
-        continuous integration and release processes. It a flexible, scalable
-        open-source framework that can be used to build complex, highly
-        customized CI systems.
-      </Typography>
-
-      <br />
-
       <Grid container spacing={2}>
-        {cards.map(({ title, content, icon }) => (
-          <Grid key={title} item sm={6} xs={12}>
-            <Card classes={{ root: classes.root }}>
-              <CardActionArea className={classes.cardActionArea}>
-                <CardContent className={classes.titleCardContent}>
-                  {icon}
-                  <Typography variant="h6" className={classes.title}>
-                    {title}
-                  </Typography>
-                </CardContent>
-                <CardContent>{content}</CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
+        <Grid item xs={12}>
+          <Card>
+            <CardActionArea className={classes.cardActionArea}>
+              <CardContent className={classes.titleCardContent}>
+                <img
+                  alt="Logo"
+                  src="https://media.taskcluster.net/logo/logo-96x120.png"
+                  className={classes.logo}
+                />
+                <Typography variant="h2">Taskcluster</Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="body1">
+                  Taskcluster is the task execution framework that supports
+                  Mozilla&#39;s continuous integration and release processes. It
+                  a flexible, scalable open-source framework that can be used to
+                  build complex, highly customized CI systems.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item sm={6} xs={12}>
+          <Card>
+            <CardActionArea className={classes.cardActionArea}>
+              <CardContent className={classes.titleCardContent}>
+                <RocketLaunchIcon />
+                <Typography variant="h6" className={classes.title}>
+                  At Mozilla
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="body2">
+                  Taskcluster is used to build{' '}
+                  <Link href="https://firefox-ci-tc.services.mozilla.com/tasks/index/gecko.v2.mozilla-release.latest.firefox">
+                    Firefox
+                  </Link>
+                  , as well as many of Mozilla&#39;s{' '}
+                  <Link href="https://community-tc.services.mozilla.com/tasks/index/project">
+                    exciting new projects
+                  </Link>
+                  .
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item sm={6} xs={12}>
+          <Card>
+            <CardActionArea className={classes.cardActionArea}>
+              <CardContent className={classes.titleCardContent}>
+                <BookOpenVariantIcon />
+                <Typography variant="h6" className={classes.title}>
+                  Documentation
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="body2">
+                  The Taskcluster documentation is at{' '}
+                  <Link href="https://docs.taskcluster.net">
+                    docs.taskcluster.net
+                  </Link>
+                  . Start here to learn how Taskcluster is designed and how to
+                  use it.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item sm={6} xs={12}>
+          <Card>
+            <CardActionArea className={classes.cardActionArea}>
+              <CardContent className={classes.titleCardContent}>
+                <SourceRepositoryMultipleIcon />
+                <Typography variant="h6" className={classes.title}>
+                  Source Code
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="body2">
+                  Find the latest Taskcluster source code{' '}
+                  <Link href="https://github.com/taskcluster">on GitHub</Link>,
+                  along with our{' '}
+                  <Link href="https://github.com/taskcluster/taskcluster-rfcs">
+                    RFC process
+                  </Link>{' '}
+                  for making architectural decisions.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item sm={6} xs={12}>
+          <Card>
+            <CardActionArea className={classes.cardActionArea}>
+              <CardContent className={classes.titleCardContent}>
+                <AccountVoiceIcon />
+                <Typography variant="h6" className={classes.title}>
+                  Contact Us
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="body2">
+                  Get in touch with the Taskcluster team, whether to ask
+                  questions, meet fellow users, or get started contributing to
+                  the project.
+                  <List dense>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ChatIcon />
+                      </ListItemIcon>
+                      <Link href="https://chat.mozilla.org/#/room/#taskcluster:mozilla.org">
+                        #taskcluster:mozilla.org
+                      </Link>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <EmailIcon />
+                      </ListItemIcon>
+                      <Link href="https://lists.mozilla.org/listinfo/tools-taskcluster">
+                        tools-taskcluster@lists.mozilla.org
+                      </Link>
+                    </ListItem>
+                  </List>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
       </Grid>
     </Fragment>
   );
