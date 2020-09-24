@@ -78,9 +78,9 @@ const Home = () => {
           <Para variant="body1" style={{ margin: '2em' }}>
             <em>
               Taskcluster is the task execution framework that supports
-              Mozilla&#39;s continuous integration and release processes. It's a
-              flexible, scalable open-source framework that can be used to build
-              complex, highly customized CI systems.
+              Mozilla&#39;s continuous integration and release processes. It is
+              a flexible, scalable open-source framework that can be used to
+              build complex, highly customized CI systems.
             </em>
           </Para>
           <Para variant="body1">
