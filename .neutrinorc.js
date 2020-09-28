@@ -16,8 +16,8 @@ module.exports = {
     }),
     react({
       html: {
-        title: 'Taskcluster',
         favicon: 'src/images/faviconLogo.png',
+        template: 'src/index.html',
       }
     }),
   ],
