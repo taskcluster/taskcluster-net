@@ -14,13 +14,12 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "classnames": "^2.2.6",
     "mdi-react": "^7.3.0",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
-    "react-fout-stager": "^3.0.0",
-    "react-hot-loader": "^4",
-    "typeface-roboto": "^0.0.75"
+    "react-hot-loader": "^4"
   },
   "devDependencies": {
     "@mozilla-frontend-infra/react-lint": "^2.0.1",
