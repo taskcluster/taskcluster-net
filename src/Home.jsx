@@ -206,15 +206,13 @@ const benefits = [
     title: 'Cloud Agnostic',
     Icon: CloudOutlineIcon,
     content: (
-      <Typography>
-        Taskcluster is designed as a flexible set of services and tools to build
-        custom continuous integration, deployment, and release processes. Its
-        micro-service architecture allows you to{' '}
-        <Link href="https://docs.taskcluster.net/docs/manual/using/integration">
-          easily adapt or replace an existing service
-        </Link>{' '}
-        to meet the needs of your business or project.
-      </Typography>
+      <Fragment>
+        <Typography>
+          Already have an established presence in AWS? Or GCP? Or Azure? Or
+          packet.net? Or bitbar? Or your own hardware in a datacenter?
+          Taskcluster supports them all.
+        </Typography>
+      </Fragment>
     ),
   },
   {
@@ -362,9 +360,7 @@ const Home = () => {
                 to build complex, highly customized CI systems.
               </Typography>
               <div className={classes.docBtnDiv}>
-                <Link
-                  target="_blank"
-                  href="https://docs.taskcluster.net/docs/manual/using/integration">
+                <Link target="_blank" href="https://docs.taskcluster.net">
                   <Button
                     className={classes.documentationButton}
                     variant="contained"
