@@ -30,6 +30,7 @@ import Tweet from './components/Tweet';
 import SteppingUpImage from './images/stepping_up.svg';
 import ContactUsImage from './images/contact_us.svg';
 import CoopTwitterImage from './images/ccooper_twitter.png';
+import WellPlayedLogo from './images/well_played_games_logo.png';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -45,8 +46,8 @@ const useStyles = makeStyles(theme => ({
   },
   firstSection: {
     textAlign: 'left',
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(12),
   },
   docBtnDiv: {
     marginTop: theme.spacing(4),
@@ -172,6 +173,22 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
     paddingTop: theme.spacing(6),
+  },
+  testimonialsDiv: {
+    padding: `${32}px ${theme.spacing(4)}px`,
+    [theme.breakpoints.up('md')]: {
+      padding: `${theme.spacing(4)}px ${theme.spacing(24)}px`,
+    },
+  },
+  testimonialContent: {
+    fontStyle: 'italic',
+    marginBottom: theme.spacing(2),
+  },
+  testimonialAuthor: {
+    marginBottom: theme.spacing(1),
+  },
+  wellPlayedGamesLogo: {
+    marginLeft: -theme.spacing(0.5),
   },
 }));
 const benefits = [
@@ -393,7 +410,33 @@ const Home = () => {
           </Grid>
         </Grid>
       </section>
-      <Divider variant="inset" className={classes.divider} />
+      <Divider className={classes.divider} />
+      <section>
+        <Grid container>
+          <Grid item xs={12}>
+            <div className={classes.testimonialsDiv}>
+              <Typography variant="h5" className={classes.testimonialContent}>
+                &quot;Taskcluster has given us more flexibility than any of the
+                CI solutions we&apos;ve used in the past. It is well engineered,
+                letting us easily pick and choose the components we need, and
+                quickly replace any that don&apos;t suit our use cases. Its
+                native support for Kubernetes meshes perfectly with our tech
+                stack.&quot;
+              </Typography>
+              <Typography className={classes.testimonialAuthor}>
+                <strong>Ricky Taylor,</strong> Co-Founder at Well Played Games
+              </Typography>
+              <img
+                alt="A logo of the company Well Played Games"
+                className={classes.wellPlayedGamesLogo}
+                width={150}
+                src={WellPlayedLogo}
+              />
+            </div>
+          </Grid>
+        </Grid>
+      </section>
+      <Divider className={classes.divider} />
       <section
         className={classNames(
           classes.container,
