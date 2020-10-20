@@ -188,6 +188,10 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
   },
   wellPlayedGamesLogo: {
+    borderBottom: 0,
+    '&:hover': {
+      borderBottom: 0,
+    },
     marginLeft: -theme.spacing(0.5),
   },
 }));
@@ -426,12 +430,17 @@ const Home = () => {
               <Typography className={classes.testimonialAuthor}>
                 <strong>Ricky Taylor,</strong> Co-Founder at Well Played Games
               </Typography>
-              <img
-                alt="A logo of the company Well Played Games"
+              <Link
                 className={classes.wellPlayedGamesLogo}
-                width={150}
-                src={WellPlayedLogo}
-              />
+                rel="noopener nofollow"
+                target="_blank"
+                href="https://wellplayed.games">
+                <img
+                  alt="A logo of the company Well Played Games"
+                  width={150}
+                  src={WellPlayedLogo}
+                />
+              </Link>
             </div>
           </Grid>
         </Grid>
