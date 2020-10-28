@@ -301,7 +301,7 @@ const features = [
     Icon: ConsoleLineIcon,
     content: (
       <Typography>
-        <Link href="https://docs.taskcluster.net/docs/tutorial/debug-task">
+        <Link href="https://docs.taskcluster.net/docs/workers/docker-worker/features#feature-interactive">
           Get interactive shell, VNC, or RDP access to running workers
         </Link>
         , right in your web browser. Debugging running process in CI has never
