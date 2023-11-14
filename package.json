@@ -8,8 +8,8 @@
     "yarn": "^1.22.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --open",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src"
   },
   "dependencies": {
@@ -27,7 +27,7 @@
     "eslint": "^7",
     "neutrino": "^9.4.0",
     "webpack": "^4",
-    "webpack-cli": "^3",
+    "webpack-cli": "^4",
     "webpack-dev-server": "^3"
   }
 }
