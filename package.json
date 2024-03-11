@@ -22,9 +22,7 @@
     "react-hot-loader": "^4"
   },
   "devDependencies": {
-    "@neutrinojs/react": "^9.4.0",
     "eslint": "^8.57.0",
-    "neutrino": "^9.4.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
