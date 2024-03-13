@@ -4,9 +4,4 @@ Note that this is not the "main" Taskcluster application; for that, see https://
 
 We welcome pull requests from everyone. We do expect everyone to adhere to the [Mozilla Community Participation Guidelines][participation].
 
-To get started developing this application, clone the repository and run
-
-```shell
-$ yarn
-$ yarn start
-```
+To get started developing this application, clone the repository and edit the contents of the `build/` folder.
